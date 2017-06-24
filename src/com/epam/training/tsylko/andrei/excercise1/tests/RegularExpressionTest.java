@@ -15,17 +15,26 @@ public class RegularExpressionTest {
 			new Object[] { "2350" },
 			new Object[] { "-9999" },
 			new Object[] { "+9999" },
-			
-			//hello
+	
+		
 			
 		};
 	}
 	@DataProvider
 	public Object[][] falseDp() {
 		return new Object[][] { 
-			new Object[] { "1000" },
+			new Object[] { "0100" },
 			new Object[] { "0001" },
 			
+			new Object[] { "abcd" },
+			new Object[] { "" },
+			new Object[] { " " },
+			new Object[] { "рсту" },
+			new Object[] { "#" },
+			new Object[] { "99999" },
+			new Object[] { "\n" },
+			new Object[] { "9999.99" },
+			new Object[] { "#" },
 			
 		};
 	}
