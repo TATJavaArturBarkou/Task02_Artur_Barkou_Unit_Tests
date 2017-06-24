@@ -1,7 +1,7 @@
 package com.epam.training.tsylko.andrei.excercise3;
 
 
-class Triangle implements Shape {
+public class Triangle implements Shape {
 
     private double sizeA;
     private double sizeB;
