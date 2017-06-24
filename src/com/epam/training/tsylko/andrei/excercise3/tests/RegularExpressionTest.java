@@ -11,6 +11,7 @@ public class RegularExpressionTest {
 	@DataProvider
 	public Object[][] trueDp() {
 		return new Object[][] { 
+			new Object[] { "99999999.99999" },
 			new Object[] { "99999999" },
 			new Object[] { "-9999" },
 			new Object[] { "+9999" },
@@ -42,12 +43,12 @@ public class RegularExpressionTest {
 	@Test(dataProvider = "trueDp")
 	public void trueTest(String inputString) {
 		
-		Assert.assertTrue(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise1.Test.CHECKER));
+		Assert.assertTrue(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise3.Test.CHECKER));
 	}
 	
 	@Test(dataProvider = "falseDp")
 	public void falseTest(String inputString) {
 		
-		Assert.assertFalse(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise1.Test.CHECKER));
+		Assert.assertFalse(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise3.Test.CHECKER));
 	}
 }

@@ -12,7 +12,7 @@ import org.testng.annotations.DataProvider;
 public class ExpressionsCalculatorTest {
 
 	@DataProvider
-	public Object[][] Dp() {
+	public Object[][] dp() {
 		return new Object[][] { 
 			new Object[] { 3.0,4.0,12.0, 6 },
 			new Object[] { 100000.0,200000.0,523606.79774997896, 1.0E10 },
@@ -28,7 +28,7 @@ public class ExpressionsCalculatorTest {
 		};
 	}
 
-	@Test(dataProvider = "Dp")
+	@Test(dataProvider = "dp")
 	public void test(double a, double b, double expectedPerimetr, double expectedSquare) {
 		
 		Triangle s = new Triangle(a, b);

@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
 public class ExpressionsCalculatorTest {
 
 	@DataProvider
-	public Object[][] Dp() {
+	public Object[][] dp() {
 		return new Object[][] { 
 			new Object[] { 1.0,2.0,3.0, 0.25 },
 			new Object[] { 0.0,2.0,3.0, 0.25 },
@@ -25,7 +25,7 @@ public class ExpressionsCalculatorTest {
 		};
 	}
 
-	@Test(dataProvider = "Dp")
+	@Test(dataProvider = "dp")
 	public void test(double a, double b, double c, double expected) {
 
 		Assert.assertEquals(ExpressionsCalculator.solveExpression(a, b, c), expected);
