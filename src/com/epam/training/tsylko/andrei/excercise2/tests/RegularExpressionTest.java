@@ -1,4 +1,4 @@
-package com.epam.training.tsylko.andrei.excercise1.tests;
+package com.epam.training.tsylko.andrei.excercise2.tests;
 
 import org.testng.annotations.Test;
 
@@ -11,43 +11,42 @@ public class RegularExpressionTest {
 	@DataProvider
 	public Object[][] trueDp() {
 		return new Object[][] { 
-			new Object[] { "1111" },
-			new Object[] { "2350" },
+			new Object[] { "99999999" },
 			new Object[] { "-9999" },
 			new Object[] { "+9999" },
-
-		
-			
+			new Object[] { "0100" },
+			new Object[] { "0001" },
+			new Object[] { "0.0" },
+			new Object[] { "1.7976931348623157E308" },
+			new Object[] { "4.9E-324" },
+			new Object[] { "-1d/0d" },
+			new Object[] { "1d/0d" },
+			//
 		};
 	}
 	@DataProvider
 	public Object[][] falseDp() {
 		return new Object[][] { 
-			new Object[] { "0100" },
-			new Object[] { "0001" },
-			
-			new Object[] { "0" },
+		
 			new Object[] { "abcd" },
 			new Object[] { "" },
 			new Object[] { " " },
-			new Object[] { "àáâã" },
+			new Object[] { "Ð°Ð±Ð²Ð³" },
 			new Object[] { "#" },
-			new Object[] { "99999" },
 			new Object[] { "\n" },
-			new Object[] { "9999.99" },
-			new Object[] { "#" },
-			
+			new Object[] { "0d/0d" },
+			new Object[] { "ì•ˆë…•" },
 		};
 	}
   
 	@Test(dataProvider = "trueDp")
-	public void compareSumOfNumbersTrueTest(String inputString) {
+	public void trueTest(String inputString) {
 		
 		Assert.assertTrue(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise1.Test.CHECKER));
 	}
 	
 	@Test(dataProvider = "falseDp")
-	public void compareSumOfNumbersFalseTest(String inputString) {
+	public void falseTest(String inputString) {
 		
 		Assert.assertFalse(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise1.Test.CHECKER));
 	}
