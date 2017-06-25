@@ -1,4 +1,4 @@
-package com.epam.training.tsylko.andrei.excercise6.tests;
+package com.epam.training.tsylko.andrei.excercise7.tests;
 
 import org.testng.annotations.Test;
 
@@ -43,12 +43,12 @@ public class RegularExpressionTest {
 	@Test(dataProvider = "trueDp")
 	public void trueTest(String inputString) {
 		
-		Assert.assertTrue(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise6.Test.CHECKER));
+		Assert.assertTrue(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise7.Test.CHECKER));
 	}
 	
 	@Test(dataProvider = "falseDp")
 	public void falseTest(String inputString) {
 		
-		Assert.assertFalse(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise6.Test.CHECKER));
+		Assert.assertFalse(Util.checkInputNumbers(inputString, com.epam.training.tsylko.andrei.excercise7.Test.CHECKER));
 	}
 }
